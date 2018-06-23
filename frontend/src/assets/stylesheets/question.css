@@ -5,7 +5,7 @@ body {
 
 .question-form {
   height: 100vh;
-  background-color: #faebd7;
+  background: #586b7d;
   margin: 0;
   /* background-image: url("../img/cherry-blossoms.jpg"); */
   /* background-size: cover; */
@@ -16,8 +16,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito';
+  color: white;
   font-size: 30px;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -26,30 +28,36 @@ body {
 }
 
 .questionnaire-input {
-  width: 100vw;
-  height: 50px;
-  font-size: 45px;
-  padding: 5px;
+  display: flex;
+  width: 70vw;
+  height: 100px;
+  font-size: 60px;
+  /* padding: 5px; */
   cursor: text;
   text-align: center;
   outline: none;
-  color: darkgray;
+  font-family: 'Nothing you could do';
+  color: white;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
 }
 
 .city-tile {
   display: flex;
-  width: 88%;
+  width: 70vw;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #faebd7;
+  /* background-color: #faebd7; */
+  margin-top: 4vh;
 }
 
 .city-image {
   display: inline;
-  height: 250px;
-  width: 250px;
+  height: 20vw;
+  width: 20vw;
   -webkit-filter: brightness(100%);
-  margin: 50px;
+  border-radius: 3px;
 }
 
 .city-image:hover {
