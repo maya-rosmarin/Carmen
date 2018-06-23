@@ -9,6 +9,7 @@ class Question extends React.Component {
 
   handleSubmit (e) {
     e.preventDefault();
+    alert('Good choice')
   }
 
   render () {
@@ -17,7 +18,7 @@ class Question extends React.Component {
         <div className="question-text">
           <h1 className="question-text-item">{this.props.text}</h1>
           <form onSubmit={this.handleSubmit}>
-            <input type="text"></input>
+            <input className="questionnaire-input" type="text"></input>
           </form>
         </div>
       </div>

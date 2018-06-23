@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .question-form {
   height: 100vh;
   background-color: #faebd7;
@@ -12,8 +17,33 @@
   justify-content: center;
   align-items: center;
   font-family: 'Nunito', sans-serif;
+  font-size: 30px;
+  text-align: center;
 }
 
 .question-text-item {
   margin-top: 300px;
+}
+
+.questionnaire-input {
+  width: 100vw;
+  height: 50px;
+  font-size: 45px;
+  padding: 5px;
+  cursor: text;
+  text-align: center;
+  outline: none;
+}
+
+.city-tile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #faebd7;
+  margin-bottom: 500px;
+}
+
+.city-image {
+  height: 250px;
+  width: 250px;
 }
