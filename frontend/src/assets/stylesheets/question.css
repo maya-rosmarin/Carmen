@@ -1,0 +1,19 @@
+.question-form {
+  height: 100vh;
+  background-color: #faebd7;
+  margin: 0;
+  /* background-image: url("../img/cherry-blossoms.jpg"); */
+  /* background-size: cover; */
+}
+
+.question-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+.question-text-item {
+  margin-top: 300px;
+}

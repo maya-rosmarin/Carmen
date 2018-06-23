@@ -1,4 +1,5 @@
 import React from 'react';
+import '../assets/stylesheets/question.css'
 
 class Question extends React.Component {
   constructor (props) {
@@ -12,11 +13,13 @@ class Question extends React.Component {
 
   render () {
     return (
-      <div>
-        <h1 className="question-form">{this.props.text}</h1>
-        <form onSubmit={this.handleSubmit}>
-          <input type="text"></input>
-        </form>
+      <div className="question-form">
+        <div className="question-text">
+          <h1 className="question-text-item">{this.props.text}</h1>
+          <form onSubmit={this.handleSubmit}>
+            <input type="text"></input>
+          </form>
+        </div>
       </div>
     )
   }
