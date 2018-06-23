@@ -38,12 +38,14 @@ body {
 
 .city-tile {
   display: flex;
+  width: 88%;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: #faebd7;
 }
 
 .city-image {
+  display: inline;
   height: 250px;
   width: 250px;
   -webkit-filter: brightness(100%);
