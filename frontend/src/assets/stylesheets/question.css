@@ -58,6 +58,7 @@ body {
   width: 20vw;
   -webkit-filter: brightness(100%);
   border-radius: 3px;
+  box-shadow: 5px 5px 10px #474747;
 }
 
 .city-image:hover {
