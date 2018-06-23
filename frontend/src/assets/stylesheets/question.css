@@ -22,7 +22,7 @@ body {
 }
 
 .question-text-item {
-  margin-top: 300px;
+  margin-top: 100px;
 }
 
 .questionnaire-input {
@@ -47,6 +47,7 @@ body {
   height: 250px;
   width: 250px;
   -webkit-filter: brightness(100%);
+  margin: 50px;
 }
 
 .city-image:hover {
