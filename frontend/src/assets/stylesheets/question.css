@@ -33,6 +33,7 @@ body {
   cursor: text;
   text-align: center;
   outline: none;
+  color: darkgray;
 }
 
 .city-tile {
@@ -45,4 +46,14 @@ body {
 .city-image {
   height: 250px;
   width: 250px;
+  -webkit-filter: brightness(100%);
+}
+
+.city-image:hover {
+  -webkit-filter: brightness(70%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
