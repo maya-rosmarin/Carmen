@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var models = require('./src/models/index.js');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -9,6 +10,7 @@ var logger = require('morgan');
 
 var app = express();
 
+models.sequelize.sync();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
