@@ -1,6 +1,6 @@
-import Sequelize from 'sequelize';
+var Sequelize = require('sequelize');
 
-CREATE USER postgres WITH SUPERUSER PASSWORD 'postgres';
+// CREATE USER postgres WITH SUPERUSER PASSWORD 'postgres';
 
 const sequelize = new Sequelize('carmen', 'postgres', 'postgres', {
   dialect: 'postgres',
@@ -19,4 +19,4 @@ Object.keys(models).forEach(key => {
 models.sequelize = sequelize;
 models.Sequelize = Sequelize;
 
-export default models;
+module.exports.models = models;
