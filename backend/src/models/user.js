@@ -8,4 +8,4 @@ const user = (sequelize, DataTypes) => {
   return User;
 }
 
-module.exports.user = user;
+module.exports = user;

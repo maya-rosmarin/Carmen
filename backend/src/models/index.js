@@ -1,3 +1,4 @@
+var path = require('path');
 var Sequelize = require('sequelize');
 
 // CREATE USER postgres WITH SUPERUSER PASSWORD 'postgres';
@@ -19,4 +20,9 @@ Object.keys(models).forEach(key => {
 models.sequelize = sequelize;
 models.Sequelize = Sequelize;
 
-module.exports.models = models;
+module.exports = {
+  models: models,
+  models_sequelize: models.sequelize
+}
+
+// module.exports.models.sequelize = models.sequelize;
