@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .question-form {
@@ -45,27 +46,76 @@ body {
 
 .city-tile {
   display: flex;
-  width: 70vw;
+  width: 96vw;
   flex-direction: row;
   justify-content: space-between;
+  /* border-left: 1vw solid white;
+  border-right: 1vw solid white; */
   /* background-color: #faebd7; */
-  margin-top: 4vh;
+  margin-top: 2vh;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.city-tile:hover {
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+  /* background: transparent; */
+  width: 30px;
+}
+::-webkit-scrollbar-thumb {
+  background: pink;
+  border-radius: 10px;
 }
 
 .city-image {
   display: inline;
   height: 20vw;
   width: 20vw;
-  -webkit-filter: brightness(100%);
+  -webkit-filter: brightness(70%);
   border-radius: 3px;
+  margin: 2vw;
+  /* border-right: 15px solid white; */
   box-shadow: 5px 5px 10px #474747;
 }
 
+.city-image-wrapper {
+  position: relative;
+  display: inline-flex;
+  /* border-top: 1vw solid white;
+  border-bottom: 1vw solid white;
+  border-right: 1vw solid white; */
+  /* border-right: none; */
+}
+
+.city-image-wrapper div {
+  position: absolute;
+  /* top: 0;
+  right: 0; */
+  color: pink;
+  left: 3vw;
+  bottom: 2vw;
+  z-index: 8;
+  text-shadow: 0px 0px 1px black;
+  font-family: "Nothing you could do";
+  font-size: 36px;
+}
+
+.city-image-wrapper:last-of-type {
+  border-right: none;
+}
+
 .city-image:hover {
-  -webkit-filter: brightness(70%);
+  -webkit-filter: brightness(50%);
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+.city-image-wrapper:hover .city-image-wrapper div {
+    visibility: visible;
 }
