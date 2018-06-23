@@ -1,5 +1,6 @@
 import React from 'react';
-import '../assets/stylesheets/question.css'
+import '../assets/stylesheets/question.css';
+import { cityTiles } from './cities';
 
 class Question extends React.Component {
   constructor (props) {
@@ -20,6 +21,7 @@ class Question extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <input className="questionnaire-input" type="text"></input>
           </form>
+         {this.props.text === "Where would you like to go?" ? cityTiles() : "" }
         </div>
       </div>
     )
