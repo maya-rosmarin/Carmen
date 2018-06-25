@@ -5,7 +5,12 @@ class Itinerary extends Component {
   render () {
     return (
       <div>
-        <DailyItinerary />
+        <DailyItinerary day={"1"} />
+        <DailyItinerary day={"2"} />
+        <DailyItinerary day={"3"} />
+        <DailyItinerary day={"4"} />
+        <DailyItinerary day={"5"} />
+        <DailyItinerary day={"6"} />
       </div>
     )
   }
