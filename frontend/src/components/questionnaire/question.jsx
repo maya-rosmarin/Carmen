@@ -1,5 +1,4 @@
 import React from 'react';
-import '../assets/stylesheets/question.css';
 import { cityTiles } from './cities';
 
 class Question extends React.Component {

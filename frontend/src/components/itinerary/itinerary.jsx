@@ -4,7 +4,8 @@ import DailyItinerary from './dailyItinerary';
 class Itinerary extends Component {
   render () {
     return (
-      <div>
+      <div className="overview-itinerary">
+        <div className="your-trip">Your Trip</div>
         <DailyItinerary day={"1"} />
         <DailyItinerary day={"2"} />
         <DailyItinerary day={"3"} />
