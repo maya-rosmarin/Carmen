@@ -39,14 +39,19 @@
     border-radius: 10px;
     border: 3px solid transparent;
     padding: 12px 12px;
+    transition: border .2s;
 }
 .itinerary-index-item:hover {
     border-radius: 10px;
     border: 3px solid lightblue;
     padding: 12px 12px;
 }
+.itinerary-index-item:hover .itinerary-index-item-time{
+    color: #2dc8fb;
+}
 .itinerary-index-item-time {
     font-size: 24px;
+    transition: .25s;
 }
 .itinerary-item-content {
     padding: 0px 12px;
