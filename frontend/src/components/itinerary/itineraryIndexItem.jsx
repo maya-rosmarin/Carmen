@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class ItineraryIndexItem extends Component {
   render () {
     return (
-      <div>
+      <div className="itinerary-index-item">
         <div className="itinerary-index-item-time">{this.props.time}</div>
         <div className="itinerary-item-content">
             <div className="itinerary-index-item-name">{this.props.name}</div>
