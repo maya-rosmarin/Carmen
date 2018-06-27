@@ -1,5 +1,6 @@
 import React from 'react';
 import { cityTiles } from './cities';
+import { Link } from 'react-router-dom';
 
 class Question extends React.Component {
   constructor (props) {
@@ -21,6 +22,10 @@ class Question extends React.Component {
             <input className="questionnaire-input" type="text"></input>
           </form>
          {this.props.text === "Where would you like to go?" ? cityTiles() : "" }
+
+         {this.props.text === "What's your budget?" ?
+         <Link className="leggo" to="/itinerary"><div className="flash">Let's Gooooo!</div>Let's GTFOH!</Link> : "" }
+
         </div>
       </div>
     )

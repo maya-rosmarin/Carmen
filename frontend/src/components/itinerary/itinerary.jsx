@@ -3,6 +3,7 @@ import DailyItinerary from './dailyItinerary';
 
 class Itinerary extends Component {
   render () {
+    window.scrollTo(0, 0);
     return (
       <div className="overview-itinerary">
         <div className="your-trip">Your Trip</div>
