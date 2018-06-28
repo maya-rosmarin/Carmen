@@ -6,7 +6,10 @@ class Itinerary extends Component {
     window.scrollTo(0, 0);
     return (
       <div className="overview-itinerary">
-        <div className="your-trip">Your Trip</div>
+        <div>
+          <div className="your">Your</div>
+          <div className="trip">Trip</div>
+        </div>
         <DailyItinerary day={"1"} />
         <DailyItinerary day={"2"} />
         <DailyItinerary day={"3"} />
