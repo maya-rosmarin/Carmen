@@ -2,8 +2,9 @@ var createError = require('http-errors');
 var express = require('express');
 var Models = require('./src/models/index.js');
 var models = Models.models;
-// var models_sequelize = Models.models_sequelize;
+var models_sequelize = Models.models_sequelize;
 var path = require('path');
+var favicon = require('serve-favicon');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var passport = require('passport');
@@ -11,11 +12,13 @@ var LocalStrategy = require('passport-local').Strategy;
 var session = require("express-session");
 var bodyParser = require("body-parser");
 
-
 // var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
 
 var app = express();
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
 passport.use(new LocalStrategy(
   function(username, password, done) {
@@ -34,8 +37,6 @@ passport.use(new LocalStrategy(
 
 // models_sequelize.sync();
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
 
 // app.configure(function() {
   app.use(express.static('public'));
