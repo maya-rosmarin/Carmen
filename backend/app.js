@@ -11,6 +11,12 @@ var LocalStrategy = require('passport-local').Strategy;
 var session = require("express-session");
 var bodyParser = require("body-parser");
 
+
+// var indexRouter = require('./routes/index');
+// var usersRouter = require('./routes/users');
+
+var app = express();
+
 passport.use(new LocalStrategy(
   function(username, password, done) {
     User.findOne({ username: username }, function (err, user) {
@@ -26,12 +32,7 @@ passport.use(new LocalStrategy(
   }
 ));
 
-// var indexRouter = require('./routes/index');
-// var usersRouter = require('./routes/users');
-
-var app = express();
-
-models_sequelize.sync();
+// models_sequelize.sync();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -60,6 +61,12 @@ passport.deserializeUser(function(id, done) {
     done(err, user);
   });
 });
+
+app.post('/login',
+  passport.authenticate('local', { successRedirect: '/',
+                                   failureRedirect: '/login',
+                                   failureFlash: true })
+);
 
 app.use(logger('dev'));
 app.use(express.json());
