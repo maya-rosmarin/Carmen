@@ -2,7 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var Models = require('./src/models/index.js');
 var models = Models.models;
-var models_sequelize = Models.models_sequelize;
+// var models_sequelize = Models.models_sequelize;
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -37,15 +37,15 @@ passport.use(new LocalStrategy(
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-app.configure(function() {
+// app.configure(function() {
   app.use(express.static('public'));
-  app.use(express.cookieParser());
-  app.use(express.bodyParser());
-  app.use(express.session({ secret: 'keyboard cat' }));
-  app.use(passport.initialize());
-  app.use(passport.session());
-  app.use(app.router);
-});
+  // app.use(express.cookieParser());
+  // app.use(express.bodyParser());
+  // app.use(express.session({ secret: 'keyboard cat' }));
+  // app.use(passport.initialize());
+  // app.use(passport.session());
+  // app.use(app.router);
+// });
 app.use(express.static("public"));
 app.use(session({ secret: "cats" }));
 app.use(bodyParser.urlencoded({ extended: false }));
