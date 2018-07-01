@@ -1,8 +1,6 @@
 var path = require('path');
 var Sequelize = require('sequelize');
 
-// CREATE USER postgres WITH SUPERUSER PASSWORD 'postgres';
-
 const sequelize = new Sequelize('carmen', 'postgres', 'postgres', {
   dialect: 'postgres',
 });
@@ -24,5 +22,3 @@ module.exports = {
   models: models,
   models_sequelize: models.sequelize
 }
-
-// module.exports.models.sequelize = models.sequelize;
