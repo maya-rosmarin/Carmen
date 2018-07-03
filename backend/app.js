@@ -4,7 +4,6 @@ var Models = require('./src/models/index.js');
 var models = Models.models;
 var models_sequelize = Models.models_sequelize;
 var path = require('path');
-var favicon = require('serve-favicon');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var passport = require('passport');
