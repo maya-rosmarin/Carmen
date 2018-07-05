@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "concurrently \"node ./bin/www\" \"cd ../frontend && npm start && nodemon server.js\""
+    "start": "concurrently \"node ./bin/www\" \"cd ../frontend && npm start\" && \"cd ./src/models && node database.js\""
   },
   "dependencies": {
     "babel-core": "^6.26.3",
