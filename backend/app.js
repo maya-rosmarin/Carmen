@@ -24,6 +24,18 @@ var bodyParser = require('body-parser');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+app.use(require(‘body-parser’).urlencoded({ extended: true }));
+const expressSession = require(‘express-session’);
+app.use(expressSession({secret: ‘mySecretKey’}));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(‘/public’, express.static(__dirname + ‘/public’));
+app.use(flash());
+app.use(session({secret: ‘keyboard cat’}))
+app.use(bodyParser());
+app.set(‘view engine’, ‘pug’);
+app.set(‘view options’, { layout: false });
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -50,3 +62,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+require(‘./routes.js’)(app);
