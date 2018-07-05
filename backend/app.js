@@ -1,8 +1,8 @@
 var createError = require('http-errors');
 var express = require('express');
-var Models = require('./src/models/index.js');
-var models = Models.models;
-var models_sequelize = Models.models_sequelize;
+// var Models = require('./src/models/index.js');
+// var models = Models.models;
+// var models_sequelize = Models.models_sequelize;
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -10,9 +10,16 @@ var logger = require('morgan');
 // var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
 
+require('dotenv').config();
+const PORT = process.env.PORT || '3005';
+var flash = require('connect-flash');
+var passport = require('passport');
+var request = require('request');
+var session = require('express-session');
 var app = express();
+var bodyParser = require('body-parser');
 
-models_sequelize.sync();
+// models_sequelize.sync();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
